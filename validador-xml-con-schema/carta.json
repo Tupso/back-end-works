@@ -1,0 +1,22 @@
+{
+    "carta": {
+        "remitente": {
+            "nombre": "Fernando",
+            "apellidos": "Alonso Diaz"
+        },
+        "destinatario": {
+            "@direccion": "El mundo",
+            "@provincia": "Sus corazones",
+            "@localidad": "La Victoria",
+            "@codigo_postal": "69450",
+            "nombre": "Los Fans",
+            "apellidos": "Todos LosFans"
+        },
+        "cuerpo": {
+            "saludo": "Saludos camaradas",
+            "parrafo": "Hola, esta es una carta dirigida a todos mis fans,\n            porinte se viene la 33, y os aseguro que no os deceptionar\u00c3\u00a9",
+            "firma": "Fernando A D",
+            "post_data": "Os quiero"
+        }
+    }
+}

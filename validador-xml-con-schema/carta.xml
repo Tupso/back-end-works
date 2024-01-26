@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- datos de la carta postal-->
+<carta>
+   <!-- remitente-->
+   <remitente>
+      <nombre>Fernando</nombre>
+      <apellidos>Alonso Diaz</apellidos>
+   </remitente>
+   <!-- destinatario-->
+   <destinatario direccion="El mundo" provincia="Sus corazones" localidad="La Victoria" codigo_postal="69450">
+      <nombre>Los Fans</nombre>
+      <apellidos>Todos LosFans</apellidos>
+   </destinatario>
+   <!-- cuerpo de la carta-->
+   <cuerpo>
+      <saludo>Saludos camaradas</saludo>
+      <parrafo>Hola, esta es una carta dirigida a todos mis fans,
+            porinte se viene la 33, y os aseguro que no os deceptionaré</parrafo>
+      <firma>Fernando A D</firma>
+      <post_data>Os quiero</post_data>
+   </cuerpo>
+</carta>
