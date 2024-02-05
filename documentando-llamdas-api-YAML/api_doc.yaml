@@ -1,0 +1,145 @@
+openapi: "3.0.3"
+info:
+  title: API de Pruebas JSONPlaceholder
+  version: "1.0.0"
+  description: Documentación del API de pruebas JSONPlaceholder para el recurso "posts"
+
+servers:
+  - url: https://jsonplaceholder.typicode.com
+
+paths:
+  /posts:
+    get:
+      summary: Todos los posts
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    userId:
+                      type: integer
+                    id:
+                      type: integer
+                    title:
+                      type: string
+                    body:
+                      type: string
+
+    post:
+      summary: Crear un nuevo post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: integer
+                title:
+                  type: string
+                body:
+                  type: string
+      responses:
+        '200':
+          description: Creado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  userId:
+                    type: integer
+                  id:
+                    type: integer
+                  title:
+                    type: string
+                  body:
+                    type: string
+        '404':
+          description: La búsqueda no ha tenido éxito
+
+  /posts/{postId}:
+    parameters:
+      - name: postId
+        in: path
+        required: true
+        description: ID del post
+        schema:
+          type: integer
+
+    get:
+      summary: Obtener un post específico
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                userId: 1
+                id: 1
+                title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+                body: "quia et suscipit\nsuscipit..."
+              schema:
+                type: object
+                properties:
+                  userId:
+                    type: integer
+                  id:
+                    type: integer
+                  title:
+                    type: string
+                  body:
+                    type: string
+
+    put:
+      summary: Actualizar un post existente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              userId: 1
+              title: "Post actualizado"
+              body: "Contenido del post actualizado"
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: integer
+                title:
+                  type: string
+                body:
+                  type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                userId: 1
+                id: 1
+                title: "Post actualizado"
+                body: "Contenido del post actualizado"
+              schema:
+                type: object
+                properties:
+                  userId:
+                    type: integer
+                  id:
+                    type: integer
+                  title:
+                    type: string
+                  body:
+                    type: string
+
+    delete:
+      summary: Eliminar un post existente
+      responses:
+        204:
+          description: Sin contenido
